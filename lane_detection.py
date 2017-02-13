@@ -345,8 +345,8 @@ video_file = "project_video.mp4"
 
 ld = LaneDetector()
 
-# clip = VideoFileClip(video_file)
-# project_clip = clip.fl_image(ld.process_frame)
-#
-# project_output = video_file[:-4] + '_output.mp4'
-# project_clip.write_videofile(project_output, audio=False)
+clip = VideoFileClip(video_file)
+project_clip = clip.fl_image(ld.process_frame)
+
+project_output = video_file[:-4] + '_output.mp4'
+project_clip.write_videofile(project_output, audio=False)
